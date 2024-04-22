@@ -1,5 +1,5 @@
 import unittest
-from snake import move_snake, is_valid_position, snake, DIRECTIONS
+from Ejercicios.snake import move_snake, is_valid_position, snake, DIRECTIONS
 
 class TestSnakeGame(unittest.TestCase):
     def test_move_valid(self):
