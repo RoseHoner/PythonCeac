@@ -8,12 +8,13 @@ print(list(map(multiplicar,lista_original)))
 # Ejercicio 2
 # 2. Filtrar los números pares de una lista:
 lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list(filter(lambda x : x%2==0, lista_numeros)))
 
 # Ejercicio 3
 # 3. Sumar todos los elementos de una lista:
 from functools import reduce
 lista_numeros = [1, 2, 3, 4, 5]
-
+print(reduce(lambda x,y : x+y , lista_numeros))
 
 # Ejercicio 4
 # 4. Filtrar los números mayores que 10 y multiplicarlos por 2:

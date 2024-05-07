@@ -1,9 +1,10 @@
 class Persona:
     
-    def __init__(self,nombre,apellidos,edad):
+    def __init__(self,nombre,apellidos,edad, dni):
         self.nombre=nombre
         self.apellidos=apellidos
         self.edad=edad
+        self.__DNI=dni
         
     def decirHola(self):
         print("Hola me llamo", self.edad)
@@ -19,6 +20,7 @@ p2=Persona("Alejandro", "Martinez Moraleda", 25)
 p1.decirHola()
 print(p1)
 print(p1==p2)
+print(p1.__DNI)
 
 class Humano(Persona):
     def __init__(self,nombre,apellidos,edad):

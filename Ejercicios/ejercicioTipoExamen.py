@@ -10,13 +10,11 @@ frases["Hola, ¿Como estas?",
         "Me gusta programar en python",
         "Python es genial"]
 '''
+from functools import reduce
 
 frases=["Hola, ¿Como estas?",
         "Me gusta programar en python",
         "Python es genial"]
 
-def palabras(x):
-    for i in range(len(x)):
-            print(i)
-print(list(map(palabras, frases)))
+    
     
