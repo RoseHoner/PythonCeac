@@ -40,9 +40,10 @@ class Tarea:
         print("ID: ",self.idTarea," Descipcion: ",self.descripcion," Fecha entrada: ",self.fechaEntrada," Fecha fin: ",self.fechaFin," Completada: ",self.completada)
     
     def mostrarListaTareas(self, listaTareas):
-        ''' for i in range(len(listaTareas)):
-            print(listaTareas[i].mostrarInfo())'''
-        print(list(map(mostrarInfo(), listaTareas)))
+        for i in range(len(listaTareas)):
+            print(listaTareas[i].mostrarInfo())
+     
+    
     
 listaTareas=[]            
 t1 = Tarea ("001","realizar el examen","26/042024","--/--/---",False)
