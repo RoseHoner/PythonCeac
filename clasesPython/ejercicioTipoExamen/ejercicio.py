@@ -18,12 +18,12 @@ from functools import reduce
     descripción y ID unico. Esto facilita la referencia cuando el usuario quiera eliminar una tarea.
 '''
 class Tarea:
-    def __init__(self, idTarea, descripcion, fechaEntrada, fechaFin, completada) :
+    def __init__(self, idTarea, descripcion, fechaEntrada, fechaFin) :
         self.idTarea=idTarea
         self.descripcion=descripcion
         self.fechaEntrada=fechaEntrada
         self.fechaFin=fechaFin
-        self.completada=completada
+        self.completada=False
     def agregarTarea (self, tarea, listaTareas):        
         listaTareas.append(tarea)
         
@@ -40,14 +40,13 @@ class Tarea:
         print("ID: ",self.idTarea," Descipcion: ",self.descripcion," Fecha entrada: ",self.fechaEntrada," Fecha fin: ",self.fechaFin," Completada: ",self.completada)
     
     def mostrarListaTareas(self, listaTareas):
-        ''' for i in range(len(listaTareas)):
-            print(listaTareas[i].mostrarInfo())'''
-        print(list(map(mostrarInfo(), listaTareas)))
+         for i in range(len(listaTareas)):
+            print(listaTareas[i].mostrarInfo())
     
 listaTareas=[]            
-t1 = Tarea ("001","realizar el examen","26/042024","--/--/---",False)
-t2 = Tarea ("002", "comprobar errores", "26/04/2024","--/--/----",False)
-t3 = Tarea ("003", "estar relajado","26/04/2024", "--/--/----", False)
+t1 = Tarea ("001","realizar el examen","26/042024","--/--/---")
+t2 = Tarea ("002", "comprobar errores", "26/04/2024","--/--/----")
+t3 = Tarea ("003", "estar relajado","26/04/2024", "--/--/----")
 
 t1.agregarTarea(t1, listaTareas)
 t2.agregarTarea(t2, listaTareas)

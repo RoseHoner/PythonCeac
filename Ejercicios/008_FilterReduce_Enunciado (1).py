@@ -1,22 +1,27 @@
 # Ejercicio 1
 # 1. Multiplicar todos los elementos de una lista por 3:
 lista_original = [1, 2, 3, 4, 5]
-
+def multiplicar(x):
+       return x*3
+print(list(map(multiplicar, lista_original)))
 
 # Ejercicio 2
 # 2. Filtrar los números pares de una lista:
 lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+print(list(filter(lambda x : x%2==0, lista_numeros)))
 # Ejercicio 3
 # 3. Sumar todos los elementos de una lista:
 from functools import reduce
 lista_numeros = [1, 2, 3, 4, 5]
-
+print(reduce(lambda x,y: x+y, lista_numeros))
 
 # Ejercicio 4
 # 4. Filtrar los números mayores que 10 y multiplicarlos por 2:
 lista_numeros = [5, 10, 15, 20, 25]
-
+filtro=list(filter(lambda x: x>10, lista_numeros))
+def multi(x):
+    return x*2
+print(list(map(multi, filtro)))
 
 # Ejercicio 5
 # 5. Filtrar las palabras que tienen más de 5 letras en una lista de palabras:
